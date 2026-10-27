@@ -1,2 +1,18 @@
 title: Welcome to my portfolio!
 theme: jekyll-theme-cayman
+description: >-
+  A Markdown learning portfolio built with Jekyll and the Cayman theme on GitHub Pages. It demonstrates headings, images, links, emoji, lists and text emphasis.
+url: "https://ovidiudeica.github.io"
+baseurl: "/markdown-portfolio"
+
+# Social preview for the site's homepage. Original Markdown lessons are unchanged.
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      image:
+        path: /assets/images/og-preview.png
+        width: 1200
+        height: 627
+        alt: "Markdown portfolio homepage preview"
