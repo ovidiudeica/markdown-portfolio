@@ -16,3 +16,7 @@ defaults:
         width: 1200
         height: 627
         alt: "Markdown portfolio homepage preview"
+
+# Render emoji examples while preserving shortcodes inside code elements.
+plugins:
+  - jemoji
