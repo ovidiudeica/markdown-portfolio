@@ -1,0 +1,16 @@
+# Overlay only for candidate GitHub Actions build.
+plugins:
+  - jemoji
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-relative-links
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  gfm_quirks: paragraph_end
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
