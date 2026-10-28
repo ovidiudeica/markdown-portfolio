@@ -31,7 +31,36 @@ The site preserves the original learning exercises:
 
 ## Publishing
 
-GitHub Pages builds the site with Jekyll using the Cayman theme specified in `_config.yml`. The homepage includes the five example files from `_includes/`. Changes to the original learning content are not required for the Open Graph link preview.
+Jekyll generates the Cayman-themed site from the committed direct dependencies.
+The homepage still includes the five historical examples from `_includes/`.
+Do not change the original learning content merely to update link-preview metadata.
+
+
+## Publishing through GitHub Actions (since 28 October 2026)
+
+This site uses **Settings → Pages → Source: GitHub Actions**, not branch-based Pages Jekyll builds.
+The `github-pages` environment permits deployments only from the protected `master`
+branch; administrative bypass of environment protection was disabled during the cutover.
+Deployment is **manual only**, never automatic on `push` or pull requests.
+
+1. Open [Container-free Pages workflow](https://github.com/ovidiudeica/markdown-portfolio/actions/workflows/pages-migration-preview.yml).
+2. Choose **Run workflow**, select `master`, enable
+   **Confirm Settings > Pages > Source is GitHub Actions**, then run **once**.
+3. Check that both the `preview` (Jekyll build and vulnerability audit) and
+   `deploy` jobs complete successfully. Do not mistake green Dependabot PR
+   previews for production deployments.
+4. Check the live site, canonical and Open Graph metadata, original content and assets.
+   The branch's required CI must pass before deployment. The deployment job uses
+   `actions/deploy-pages`; the build uses the committed `Gemfile.lock`, not
+   GitHub's managed `jekyll-build-pages` container.
+
+**Emergency rollback:** stop manual deployment; if publication is broken, switch
+**Settings → Pages → Build and deployment → Source** back to
+**Deploy from a branch → master → /(root)**. This restores the old path but
+**reintroduces the provider-managed Jekyll image risk**: re-open
+[the tracked security issue](https://github.com/ovidiudeica/myfirstslideshow/issues/32)
+and reinstate the Actions workflow once repaired. Rollback never requires
+force-pushing or disabling branch protection.
 
 ## Origin and license
 
