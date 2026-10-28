@@ -70,7 +70,7 @@ GEM
     jekyll-github-metadata (2.16.1)
       jekyll (>= 3.4, < 5.0)
       octokit (>= 4, < 7, != 4.4.0)
-    jekyll-relative-links (0.6.1)
+    jekyll-relative-links (0.9.1)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -170,7 +170,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.10.0)
   jekyll-github-metadata (= 2.16.1)
-  jekyll-relative-links (= 0.6.1)
+  jekyll-relative-links (= 0.9.1)
   jekyll-seo-tag (= 2.9.1)
   jekyll-theme-cayman (= 0.2.0)
   jemoji (= 0.13.0)
