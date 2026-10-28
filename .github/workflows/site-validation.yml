@@ -38,3 +38,6 @@ jobs:
 
       - name: Verify emoji rendering and literal code examples
         run: python3 .github/scripts/check-emoji.py _site/index.html
+
+      - name: Verify portfolio Open Graph metadata and negative regressions
+        run: python3 .github/scripts/check-metadata.py _site/index.html --negative-tests
